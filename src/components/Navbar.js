@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "../logo.svg";
 import { NavLink, Link, withRouter } from "react-router-dom";
 
 class Navbar extends Component {
@@ -10,62 +9,83 @@ class Navbar extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className='uk-navbar-container '>
-                    <nav className='uk-navbar uk-background-primary uk-light'>
-                        <div className='uk-navbar-left'>
-                            <a href='../' className='uk-navbar-item uk-logo'>
-                                <img
-                                    src={logo}
-                                    className='App-logo'
-                                    alt='logo'
-                                />
-                            </a>
-                        </div>
-                        <div className='uk-navbar-right'>
-                            <ul className='uk-navbar-nav uk-visible@m'>
-                                <li className='uk-navbar-item'>
-                                    <a className='' href='./topic3'>
-                                        Topic 3
-                                    </a>
-                                </li>
-                                <li className='uk-navbar-item'>
-                                    <a className='' href='./topic4'>
-                                        Topic 4
-                                    </a>
-                                </li>
-                                <li className='uk-navbar-item'>
-                                    <a className='' href='./topic5'>
-                                        Topic 5
-                                    </a>
-                                </li>
-                            </ul>
-                            <div className='uk-navbar-item uk-visible@m'>
-                                <a
-                                    href=''
-                                    className='uk-button uk-button-default tm-button-default uk-icon uk-light'
-                                >
-                                    <canvas
-                                        uk-icon='icon: home'
-                                        width='20'
-                                        height='20'
-                                        className='uk-icon'
-                                        hidden='true'
-                                    />{" "}
-                                    Portfolio
+                <nav className='navbar navbar-expand-lg navbar-dark bg-purple'>
+                    <a className='navbar-brand' href='#'>
+                        James Billy O. Vasig
+                    </a>
+                    <button
+                        className='navbar-toggler'
+                        type='button'
+                        data-toggle='collapse'
+                        data-target='#navbarSupportedContent'
+                        aria-controls='navbarSupportedContent'
+                        aria-expanded='false'
+                        aria-label='Toggle navigation'
+                    >
+                        <span className='navbar-toggler-icon' />
+                    </button>
+
+                    <div
+                        className='collapse navbar-collapse'
+                        id='navbarSupportedContent'
+                    >
+                        <ul className='navbar-nav ml-auto'>
+                            <li className='nav-item active'>
+                                <a className='nav-link' href='#'>
+                                    Home{" "}
+                                    <span className='sr-only'>(current)</span>
                                 </a>
-                            </div>
-                            <a
-                                uk-navbar-toggle-icon=''
-                                href='#my-id'
-                                uk-toggle=''
-                                className='uk-navbar-toggle uk-hidden@m uk-navbar-toggle-icon uk-icon uk-light'
-                            />
-                        </div>
-                    </nav>
-                </div>
-                <div id='my-id' className='uk-offcanvas'>
-                    <p>Hello World</p>
-                </div>
+                            </li>
+                            <li className='nav-item'>
+                                <a className='nav-link' href='#'>
+                                    Link
+                                </a>
+                            </li>
+                            <li className='nav-item dropdown'>
+                                <a
+                                    className='nav-link dropdown-toggle'
+                                    href='#'
+                                    id='navbarDropdown'
+                                    role='button'
+                                    data-toggle='dropdown'
+                                    aria-haspopup='true'
+                                    aria-expanded='false'
+                                >
+                                    Dropdown
+                                </a>
+                                <div
+                                    className='dropdown-menu'
+                                    aria-labelledby='navbarDropdown'
+                                >
+                                    <a className='dropdown-item' href='#'>
+                                        Action
+                                    </a>
+                                    <a className='dropdown-item' href='#'>
+                                        Another action
+                                    </a>
+                                    <div className='dropdown-divider' />
+                                    <a className='dropdown-item' href='#'>
+                                        Something else here
+                                    </a>
+                                </div>
+                            </li>
+                            <li className='nav-item'>
+                                <a className='nav-link disabled' href='#'>
+                                    Disabled
+                                </a>
+                            </li>
+                            <li className='nav-item'>
+                                <a
+                                    className='btn btn-success my-2 my-sm-0 text-white'
+                                    href='https://kreativjamesz.github.io'
+                                    target='_blank'
+                                >
+                                    My Portfolio
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </React.Fragment>
         );
     }
